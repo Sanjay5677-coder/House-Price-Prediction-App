@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                
+                background-image:url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80");
+                background-position:150%;
+                background-size:cover;
+            }
+            form{
+                border:2px solid blue;
+                border-radius:6px;
+                height:400px;
+                width:200px;
+                display: block;
+                text-align:center;    
+                margin-left:567px;     
+            }
+            h3{
+                color:red;
+                text-align:center;
+                margin-bottom:-20px;
+            }
+            input[type=text]{
+                margin-top:5px;
+                padding:4px;
+                border:3px solid blue;
+                border-radius:6px;
+            }
+            input[type=submit]{
+                margin-top:6px;
+                padding:4px;
+                color:Blue;
+                background-color:white;
+                border-radius:6px ;
+                radius:5px;
+            }
+            input[type=submit]:hover{
+                margin-top:6px;
+                padding:4px;
+                color:white;
+                background-color:blue;
+                border-radius:6px ;
+
+
+            }
+            h2{
+                color:yellow;
+            }
+           h1{
+            color:yellow;
+                text-align:center;
+           }
+        </style>
+        <title>Insurance</title>
+        <body>
+            <h1>House Price Prediction App</h1>
+            <h2>Developed By : Sanjay</h2>
+            <form action = "{{url_for('predict')}}" method="POST">
+                <input type="text" name="bedrooms" placeholder="bedrooms">
+                <input type="text" name='bathrooms' placeholder='bathrooms'>
+                <input type="text" name='Living ' placeholder="Living Area">
+                
+                <input type="text" name='floors' placeholder="floors">
+                <input type="text" name='waterfront	' placeholder="waterfront	">
+                <input type="text" name='view' placeholder="view">
+              
+                <input type="text" name='sqft_basement' placeholder="sqft_basement">
+                <input type="text" name='yr_renovated	' placeholder="yr_renovated	">
+               
+                
+                <input type="text" name='sqft_living15' placeholder="sqft_living15	">
+                <input type="text" name='sqft_lot15' placeholder="sqft_lot15">
+                 
+                    <input type="submit" >
+
+                </form>
+
+             <br>   
+          <h3> {{ prediction }} </h3>
+          </body>
+        </head>
+        </html>                
